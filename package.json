@@ -1,0 +1,27 @@
+{
+  "name": "swiggy",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-Shikha/Swiggy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-Shikha/Swiggy/issues"
+  },
+  "homepage": "https://github.com/the-Shikha/Swiggy#readme",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.14.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
