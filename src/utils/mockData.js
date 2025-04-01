@@ -1,40 +1,3 @@
-import React from 'react'
-import {createRoot} from 'react-dom/client';
-
-const Header=()=>{
-    return(
-        <div className='header'>
-             <div className='logo-container'>
-                <img className='logo' src="https://static.vecteezy.com/system/resources/previews/011/468/885/non_2x/food-logo-spoon-fork-icon-illustration-symbol-for-fast-delivery-app-restaurant-template-free-vector.jpg" alt="" srcSet="" />
-             </div>
-             <div className='nav-items'>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-             </div>
-        </div>
-    )
-}
-
-
-
-const RestaurantCard=(props)=>{
-    const {resData}=props
-    const {name,cuisines,avgRating,costForTwo,sla,id}=resData?.info
-    return(
-        <div className='res-card'>
-            <img className='res-logo' src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+resData.info.cloudinaryImageId} alt="" />
-            <h3>{name}</h3>
-            <p>{cuisines.join(", ")}</p>
-            <p>{avgRating}</p>
-            <h4>{costForTwo}</h4>
-            <p>{sla.deliveryTime} minutes</p>
-        </div>
-    )
-}
 const resList=[
     {
     "info": {
@@ -657,28 +620,6 @@ const resList=[
     }
     }
     ]
-        
-const Body=()=>{
-    return (
-        <div className='body'>
-            <div className='search'>Search</div>
-            <div className='res-container'>
-                {resList.map((restaurant,id)=>(
-                    <RestaurantCard key={id} resData={restaurant}/>
-                ))}
-                
-                
-            </div>
-        </div>
-    )
-}
-const App=()=>{
-    return(
-        <div className='app'>
-            <Header/>
-            <Body/>
-        </div>
-    )
-}
-const Root=createRoot(document.getElementById('root'));
-Root.render(<App/>)
+
+
+export default resList
