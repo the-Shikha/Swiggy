@@ -21,8 +21,8 @@ const Body=()=>{
         //console.log(json)
         //console.log(json?.cards[3].card?.card?.gridElements?. infoWithStyle?.restaurants)
        // setListOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-       setListOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-       setFilterRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+       setListOfRestaurants(json?.data?.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+       setFilterRestaurant(json?.data?.cards[4]?.card?.card?.gridElements.infoWithStyle.restaurants);
     }
     
 
@@ -34,7 +34,7 @@ const Body=()=>{
     if (!listOfRestaurants || listOfRestaurants.length === 0) {
         return <Shimmer/>;
       }
-    const {loggedInUser,setUserName}=useContext(UserContext)
+    // const {loggedInUser,setUserName}=useContext(UserContext)
     return (
         <div className="p-4 max-w-7xl mx-auto">
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
@@ -47,7 +47,7 @@ const Body=()=>{
                         setSearchText("")
                     }}>Search</button>
                 </div>
-                <input className="border border-black p-2" type="text" value={loggedInUser} onChange={(e)=>{setUserName(e.target.value)}}/>
+                {/* <input className="border border-black p-2" type="text" value={loggedInUser} onChange={(e)=>{setUserName(e.target.value)}}/> */}
             <div className="mb-6">
                 
                 <button className="px-4 py-2 text-white border bg-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition" onClick={()=>{
